@@ -1,0 +1,24 @@
+image_width: 640
+image_height: 480
+camera_name: default_cam
+camera_matrix:
+  rows: 3
+  cols: 3
+  # Paste your Camera Matrix (K) here as a flat list
+  # Format: [fx, 0, cx, 0, fy, cy, 0, 0, 1]
+  data: [605.12, 0, 320.5, 0, 604.91, 240.1, 0, 0, 1]
+distortion_model: plumb_bob
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  # Paste your Distortion Coeffs (D) here
+  data: [-0.12, 0.05, 0, 0, 0]
+rectification_matrix:
+  rows: 3
+  cols: 3
+  data: [1, 0, 0, 0, 1, 0, 0, 0, 1]
+projection_matrix:
+  rows: 3
+  cols: 4
+  # Usually just K with an extra column of zeros
+  data: [605.12, 0, 320.5, 0, 0, 604.91, 240.1, 0, 0, 0, 1, 0]
