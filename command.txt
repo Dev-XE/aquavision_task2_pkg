@@ -1,0 +1,15 @@
+terminal 1 :
+# Example for a standard USB webcam
+ros2 run usb_cam usb_cam_node_exe --ros-args --remap /image_raw:=/camera/image_raw
+
+#with congfig file
+ros2 run usb_cam usb_cam_node_exe --ros-args \
+    --remap /image_raw:=/camera/image_raw \
+    -p camera_info_url:="file:///home/yashas/srmauv_ws/src/aquavision_task2_pkg/config/default_cam.yaml"
+
+
+terminal 2:
+ros2 run aquavision_task2_pkg vision_node
+
+terminal 3:
+ros2 topic echo /gate/position
